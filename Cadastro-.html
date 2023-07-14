@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>Cadastro</title>
+  <script>
+    function salvarNome() {
+      var razaoSocial = document.getElementById('razaoSocial').value; // Obtém o valor inserido no campo 'razaoSocial'
+      var scriptSQL = "INSERT INTO CLIFOR (CLF_NOMERAZAO) VALUES ('" + razaoSocial + "');"; // Cria o script SQL
+
+      document.getElementById('resultado').innerHTML = scriptSQL; // Exibe o script SQL na página
+    }
+  </script>
+</head>
+<body>
+  <h1>Cadastro</h1>
+  
+  <label for="razaoSocial">Razão Social:</label>
+  <input type="text" id="razaoSocial" name="razaoSocial">
+  <button onclick="salvarNome()">Salvar</button>
+  
+  <div id="resultado"></div> <!-- Aqui será exibido o resultado -->
+
+</body>
+</html>
